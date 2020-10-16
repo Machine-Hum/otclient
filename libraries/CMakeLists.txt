@@ -1,5 +1,5 @@
-add_subdirectory(chainbase)
 add_subdirectory(fc)
+# add_subdirectory(version)
 
 add_library(
     test_lib
@@ -8,4 +8,3 @@ add_library(
 )
 
 target_include_directories(test_lib PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}")
-# target_include_directories(test_lib PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}fc/src")
