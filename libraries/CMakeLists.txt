@@ -1,4 +1,7 @@
 add_subdirectory(fc)
+add_subdirectory(chain)
+add_subdirectory(chainbase)
+
 # add_subdirectory(version)
 
 add_library(
