@@ -1,7 +1,8 @@
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 3.8)
 project(otclient)
 
 set(VERSION "1.0.0")
+set(CMAKE_CXX_STANDARD 17)
 
 option(FRAMEWORK_SOUND "Use SOUND " ON)
 option(FRAMEWORK_GRAPHICS "Use GRAPHICS " ON)
@@ -9,8 +10,14 @@ option(FRAMEWORK_XML "Use XML " ON)
 option(FRAMEWORK_NET "Use NET " ON)
 option(FRAMEWORK_SQL "Use SQL" OFF)
 
+include( GNUInstallDirs )
+# include( InstallDirectoryPermissions )
+# include( MASSigning )
+
 include(src/framework/CMakeLists.txt)
 include(src/client/CMakeLists.txt)
+
+add_subdirectory(libraries)
 
 # functions map for reading backtraces
 if(NOT APPLE)
@@ -37,7 +44,8 @@ add_definitions(-D"VERSION=\\"${VERSION}\\"")
 
 # add client executable
 add_executable(${PROJECT_NAME} ${framework_SOURCES} ${client_SOURCES} ${executable_SOURCES})
-target_link_libraries(${PROJECT_NAME} ${framework_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} ${framework_LIBRARIES} test_lib fc)
+# target_link_libraries(${PROJECT_NAME} ${framework_LIBRARIES})
 
 if(USE_PCH)
     include(cotire)

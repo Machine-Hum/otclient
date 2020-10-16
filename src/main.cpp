@@ -24,6 +24,15 @@
 #include <framework/core/resourcemanager.h>
 #include <framework/luaengine/luainterface.h>
 #include <client/client.h>
+#include <type_traits>
+
+#include <test_lib/test.h>
+#include <pwd.h>
+#include <string>
+#include <vector>
+#include <regex>
+#include <iostream>
+#include <fc/crypto/hex.hpp>
 
 int main(int argc, const char* argv[])
 {
