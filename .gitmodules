@@ -4,3 +4,18 @@
 [submodule "libraries/chainbase"]
 	path = libraries/chainbase
 	url = https://github.com/EOSIO/chainbase
+[submodule "libraries/eos-vm"]
+	path = libraries/eos-vm
+	url = https://github.com/EOSIO/eos-vm
+[submodule "libraries/appbase"]
+	path = libraries/appbase
+	url = https://github.com/EOSIO/appbase
+[submodule "libraries/berkeley-softfloat-3"]
+	path = libraries/berkeley-softfloat-3
+	url = https://github.com/EOSIO/berkeley-softfloat-3
+[submodule "libraries/wabt"]
+	path = libraries/wabt
+	url = https://github.com/EOSIO/wabt
+[submodule "libraries/yubihsm-shell"]
+	path = libraries/yubihsm-shell
+	url = https://github.com/Yubico/yubihsm-shell

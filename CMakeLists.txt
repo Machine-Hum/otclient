@@ -44,8 +44,7 @@ add_definitions(-D"VERSION=\\"${VERSION}\\"")
 
 # add client executable
 add_executable(${PROJECT_NAME} ${framework_SOURCES} ${client_SOURCES} ${executable_SOURCES})
-target_link_libraries(${PROJECT_NAME} ${framework_LIBRARIES} test_lib fc chain version)
-# target_link_libraries(${PROJECT_NAME} ${framework_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} ${framework_LIBRARIES} test_lib chain version eosio_chain fc eos-vm wasm-jit)
 
 if(USE_PCH)
     include(cotire)

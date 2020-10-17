@@ -1,8 +1,15 @@
-add_subdirectory(fc)
+add_subdirectory(appbase)
+add_subdirectory(berkeley-softfloat-3)
+add_subdirectory(builtins)
 add_subdirectory(chain)
 add_subdirectory(chainbase)
-
-# add_subdirectory(version)
+add_subdirectory(eos-vm)
+add_subdirectory(fc)
+add_subdirectory(testing)
+add_subdirectory(version)
+add_subdirectory(wabt)
+add_subdirectory(wasm-jit)
+add_subdirectory(yubihsm-shell)
 
 add_library(
     test_lib
